@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		818B01AC9712369721CF58C8 /* Pods_iOS_RTM_MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C32C11F6087F89108A382BC /* Pods_iOS_RTM_MessageKit.framework */; };
+		F380A28E25EFC6FE0057B4CA /* MultiChatVC+Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380A28D25EFC6FD0057B4CA /* MultiChatVC+Members.swift */; };
+		F380A29125EFC73F0057B4CA /* MultiChatVC+Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380A29025EFC73F0057B4CA /* MultiChatVC+Messages.swift */; };
+		F380A29425EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380A29325EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift */; };
+		F393B60E25E93717009996EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393B60D25E93717009996EB /* AppDelegate.swift */; };
+		F393B61025E93717009996EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393B60F25E93717009996EB /* SceneDelegate.swift */; };
+		F393B61225E93717009996EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393B61125E93717009996EB /* ViewController.swift */; };
+		F393B61525E93717009996EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F393B61325E93717009996EB /* Main.storyboard */; };
+		F393B61725E93719009996EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F393B61625E93719009996EB /* Assets.xcassets */; };
+		F393B61A25E93719009996EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F393B61825E93719009996EB /* LaunchScreen.storyboard */; };
+		F393B62425E937F0009996EB /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = F393B62325E937F0009996EB /* MessageKit */; };
+		F393B62725E93AF2009996EB /* RTMChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393B62625E93AF2009996EB /* RTMChatViewController.swift */; };
+		F3A3A29525F90C4800209F2D /* DownloadCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A3A29425F90C4800209F2D /* DownloadCollectionCell.swift */; };
+		F3BECD2225F798470060A8F4 /* MultiChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BECD2125F798470060A8F4 /* MultiChatVC.swift */; };
+		F3BECD2725F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BECD2625F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift */; };
+		F3EB450A25EE80D400945D6A /* MessageKitMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB450925EE80D400945D6A /* MessageKitMessage.swift */; };
+		F3EB450D25EE8B6900945D6A /* RTMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB450C25EE8B6900945D6A /* RTMUser.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C32C11F6087F89108A382BC /* Pods_iOS_RTM_MessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_RTM_MessageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD66638DF3EA3E3E488AF86 /* Pods-iOS-RTM-MessageKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-RTM-MessageKit.release.xcconfig"; path = "Target Support Files/Pods-iOS-RTM-MessageKit/Pods-iOS-RTM-MessageKit.release.xcconfig"; sourceTree = "<group>"; };
+		788BFDCD41D408EBCF0DA297 /* Pods-iOS-RTM-MessageKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-RTM-MessageKit.debug.xcconfig"; path = "Target Support Files/Pods-iOS-RTM-MessageKit/Pods-iOS-RTM-MessageKit.debug.xcconfig"; sourceTree = "<group>"; };
+		F380A28D25EFC6FD0057B4CA /* MultiChatVC+Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiChatVC+Members.swift"; sourceTree = "<group>"; };
+		F380A29025EFC73F0057B4CA /* MultiChatVC+Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiChatVC+Messages.swift"; sourceTree = "<group>"; };
+		F380A29325EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiChatVC+AgoraRtmDelegate.swift"; sourceTree = "<group>"; };
+		F393B60A25E93717009996EB /* iOS-RTM-MessageKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-RTM-MessageKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F393B60D25E93717009996EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F393B60F25E93717009996EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F393B61125E93717009996EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F393B61425E93717009996EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F393B61625E93719009996EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F393B61925E93719009996EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F393B61B25E93719009996EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F393B62625E93AF2009996EB /* RTMChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMChatViewController.swift; sourceTree = "<group>"; };
+		F3A3A29425F90C4800209F2D /* DownloadCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCollectionCell.swift; sourceTree = "<group>"; };
+		F3BECD2125F798470060A8F4 /* MultiChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiChatVC.swift; sourceTree = "<group>"; };
+		F3BECD2625F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiChatVC+Downloads.swift"; sourceTree = "<group>"; };
+		F3EB450925EE80D400945D6A /* MessageKitMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageKitMessage.swift; sourceTree = "<group>"; };
+		F3EB450C25EE8B6900945D6A /* RTMUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMUser.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F393B60725E93717009996EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F393B62425E937F0009996EB /* MessageKit in Frameworks */,
+				818B01AC9712369721CF58C8 /* Pods_iOS_RTM_MessageKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		747AFD000358B136CF04DA60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				788BFDCD41D408EBCF0DA297 /* Pods-iOS-RTM-MessageKit.debug.xcconfig */,
+				5AD66638DF3EA3E3E488AF86 /* Pods-iOS-RTM-MessageKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E4F4776A2980146BD1D9CBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C32C11F6087F89108A382BC /* Pods_iOS_RTM_MessageKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F393B60125E93717009996EB = {
+			isa = PBXGroup;
+			children = (
+				F393B60C25E93717009996EB /* iOS-RTM-MessageKit */,
+				F393B60B25E93717009996EB /* Products */,
+				747AFD000358B136CF04DA60 /* Pods */,
+				9E4F4776A2980146BD1D9CBF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F393B60B25E93717009996EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F393B60A25E93717009996EB /* iOS-RTM-MessageKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F393B60C25E93717009996EB /* iOS-RTM-MessageKit */ = {
+			isa = PBXGroup;
+			children = (
+				F393B60D25E93717009996EB /* AppDelegate.swift */,
+				F393B60F25E93717009996EB /* SceneDelegate.swift */,
+				F393B61125E93717009996EB /* ViewController.swift */,
+				F3BECD2125F798470060A8F4 /* MultiChatVC.swift */,
+				F3A3A29425F90C4800209F2D /* DownloadCollectionCell.swift */,
+				F380A29025EFC73F0057B4CA /* MultiChatVC+Messages.swift */,
+				F380A28D25EFC6FD0057B4CA /* MultiChatVC+Members.swift */,
+				F3BECD2625F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift */,
+				F380A29325EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift */,
+				F393B62625E93AF2009996EB /* RTMChatViewController.swift */,
+				F3EB450925EE80D400945D6A /* MessageKitMessage.swift */,
+				F3EB450C25EE8B6900945D6A /* RTMUser.swift */,
+				F393B61325E93717009996EB /* Main.storyboard */,
+				F393B61625E93719009996EB /* Assets.xcassets */,
+				F393B61825E93719009996EB /* LaunchScreen.storyboard */,
+				F393B61B25E93719009996EB /* Info.plist */,
+			);
+			path = "iOS-RTM-MessageKit";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F393B60925E93717009996EB /* iOS-RTM-MessageKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F393B61E25E93719009996EB /* Build configuration list for PBXNativeTarget "iOS-RTM-MessageKit" */;
+			buildPhases = (
+				CFBDBD5A342D9676A721A0DA /* [CP] Check Pods Manifest.lock */,
+				F393B60625E93717009996EB /* Sources */,
+				F393B60725E93717009996EB /* Frameworks */,
+				F393B60825E93717009996EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-RTM-MessageKit";
+			packageProductDependencies = (
+				F393B62325E937F0009996EB /* MessageKit */,
+			);
+			productName = "iOS-RTM-MessageKit";
+			productReference = F393B60A25E93717009996EB /* iOS-RTM-MessageKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F393B60225E93717009996EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					F393B60925E93717009996EB = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = F393B60525E93717009996EB /* Build configuration list for PBXProject "iOS-RTM-MessageKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F393B60125E93717009996EB;
+			packageReferences = (
+				F393B62225E937F0009996EB /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
+			productRefGroup = F393B60B25E93717009996EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F393B60925E93717009996EB /* iOS-RTM-MessageKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F393B60825E93717009996EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F393B61A25E93719009996EB /* LaunchScreen.storyboard in Resources */,
+				F393B61725E93719009996EB /* Assets.xcassets in Resources */,
+				F393B61525E93717009996EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CFBDBD5A342D9676A721A0DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-RTM-MessageKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F393B60625E93717009996EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BECD2725F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift in Sources */,
+				F3EB450A25EE80D400945D6A /* MessageKitMessage.swift in Sources */,
+				F393B62725E93AF2009996EB /* RTMChatViewController.swift in Sources */,
+				F393B61225E93717009996EB /* ViewController.swift in Sources */,
+				F3EB450D25EE8B6900945D6A /* RTMUser.swift in Sources */,
+				F3BECD2225F798470060A8F4 /* MultiChatVC.swift in Sources */,
+				F380A29125EFC73F0057B4CA /* MultiChatVC+Messages.swift in Sources */,
+				F3A3A29525F90C4800209F2D /* DownloadCollectionCell.swift in Sources */,
+				F393B60E25E93717009996EB /* AppDelegate.swift in Sources */,
+				F380A28E25EFC6FE0057B4CA /* MultiChatVC+Members.swift in Sources */,
+				F380A29425EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift in Sources */,
+				F393B61025E93717009996EB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F393B61325E93717009996EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F393B61425E93717009996EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F393B61825E93719009996EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F393B61925E93719009996EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F393B61C25E93719009996EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F393B61D25E93719009996EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F393B61F25E93719009996EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 788BFDCD41D408EBCF0DA297 /* Pods-iOS-RTM-MessageKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "iOS-RTM-MessageKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.example.iOS-RTM-MessageKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F393B62025E93719009996EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD66638DF3EA3E3E488AF86 /* Pods-iOS-RTM-MessageKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "iOS-RTM-MessageKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.example.iOS-RTM-MessageKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F393B60525E93717009996EB /* Build configuration list for PBXProject "iOS-RTM-MessageKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F393B61C25E93719009996EB /* Debug */,
+				F393B61D25E93719009996EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F393B61E25E93719009996EB /* Build configuration list for PBXNativeTarget "iOS-RTM-MessageKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F393B61F25E93719009996EB /* Debug */,
+				F393B62025E93719009996EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F393B62225E937F0009996EB /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F393B62325E937F0009996EB /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F393B62225E937F0009996EB /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F393B60225E93717009996EB /* Project object */;
+}
