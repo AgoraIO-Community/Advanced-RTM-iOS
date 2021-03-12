@@ -14,10 +14,11 @@ class MultiChatVC: UIViewController {
     static var sessionID: String = UUID().uuidString
 
     // MARK: Agora RTM and General
+    var username: String
+    var channel: String
     var rtmKit: AgoraRtmKit?
     var rtmChannel: AgoraRtmChannel?
-    public let localUser: RTMUser
-    var usersLookup: [String: RTMUser] = [:]
+    var localUser: RTMUser!
     var pageHeaders: [String] = ["Messages", "Members", "Downloads"]
     var pages: (messages: UIView, members: UIView, downloads: UIView) = (UIView(), UIView(), UIView())
     var pagesArr: [UIView] {
@@ -25,7 +26,8 @@ class MultiChatVC: UIViewController {
     }
 
     // MARK: MessageKit
-    var messageKitVC: RTMChatViewController
+    var messageKitVC: RTMChatViewController!
+    lazy var messageList: [MessageType] = []
 
     // MARK: Members
     var connectedUsers: [RTMUser] = []
@@ -62,30 +64,44 @@ class MultiChatVC: UIViewController {
     var downloadsTable: UICollectionView?
     var downloadFiles: [DownloadableFileData] = []
     var previewItem: URL?
+    func rtmLogin() {
+        self.rtmKit = AgoraRtmKit(appId: <#Agora App ID#>, delegate: self)
+        self.rtmKit?.login(byToken: nil, user: self.localUser.userDetails.senderId, completion: { loginCode in
+            if loginCode == .ok {
+                self.rtmChannel = self.rtmKit?.createChannel(withId: self.channel, delegate: self)
+                self.rtmChannel?.join(completion: self.channelJoined(joinCode:))
+            }
+        })
+    }
+
+    func channelJoined(joinCode: AgoraRtmJoinChannelErrorCode) {
+        if joinCode == .channelErrorOk {
+            print("connected to channel")
+            self.localUser.status = .online
+            self.connectedUsers.insert(self.localUser, at: 0)
+            self.usersLookup[self.localUser.userDetails.senderId] = self.localUser
+            self.rtmChannel?.send(self.localUser.statusRTMMessage) { sentErr in
+                if sentErr != .errorOk {
+                    print("status to channel send failed \(sentErr.rawValue)")
+                }
+            }
+            self.membersTable?.reloadData()
+        }
+    }
 
     init(username: String, channel: String) {
+        self.username = username
+        self.channel = channel
+        super.init(nibName: nil, bundle: nil)
         self.localUser = RTMUser(
-            userDetails: Sender(senderId: MultiChatVC.sessionID, displayName: username),
+            userDetails: Sender(senderId: MultiChatVC.sessionID, displayName: self.username),
             handRaised: false,
             status: .offline
         )
-        self.messageKitVC = RTMChatViewController(username: username)
-        super.init(nibName: nil, bundle: nil)
-        self.rtmKit = AgoraRtmKit(appId: <#Agora App ID#>, delegate: self)
-        self.rtmKit?.login(byToken: <#Agora Token#>, user: self.localUser.userDetails.senderId, completion: { loginCode in
-            if loginCode == .ok {
-                self.rtmChannel = self.rtmKit?.createChannel(withId: channel, delegate: self)
-                self.rtmChannel?.join(completion: { joinCode in
-                    if joinCode == .channelErrorOk {
-                        print("connected to channel")
-                        self.localUser.status = .present
-                        self.sendStatus(to: self.rtmChannel!)
-                    }
-                })
-            }
-        })
-        self.view.backgroundColor = .systemBackground
+    }
 
+    func setupBaseUI() {
+        self.view.backgroundColor = .systemBackground
         let segController = UISegmentedControl(items: self.pageHeaders)
         segController.addTarget(self, action: #selector(changeSegment), for: .valueChanged)
         self.navigationItem.titleView = segController
@@ -104,6 +120,7 @@ class MultiChatVC: UIViewController {
             page.backgroundColor = .systemBackground
         }
         segController.selectedSegmentIndex = 0
+
     }
 
     @objc func changeSegment(sender: UISegmentedControl) {
@@ -115,13 +132,13 @@ class MultiChatVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.pages.downloads.isHidden = true
-        self.pages.members.isHidden = true
-        self.pages.messages.backgroundColor = .orange
-
+        self.setupBaseUI()
         setupMessagesView()
         setupMembersView()
         setupDownloadsView()
+        self.rtmLogin()
+        self.pages.downloads.isHidden = true
+        self.pages.members.isHidden = true
     }
 
     override func viewWillDisappear(_ animated: Bool) {

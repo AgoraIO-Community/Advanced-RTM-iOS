@@ -16,7 +16,7 @@ class RTMChatViewController: MessagesViewController {
 
     public let subviewInputBar = InputBarAccessoryView()
 
-    init(username: String) {
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -30,11 +30,5 @@ class RTMChatViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    lazy var messageList: [MessageType] = [
-//        RTMMessage(sender: Sender(senderId: "Bob", displayName: "Bob"), messageId: "123", sentDate: .init(), kind: .text("test")),
-//        RTMMessage(sender: Sender(senderId: "Bob", displayName: "Bob"), messageId: "123", sentDate: .init(), kind: .text("test")),
-//        RTMMessage(sender: Sender(senderId: "dasfsdfdfs", displayName: "Bob4"), messageId: "123", sentDate: .init(), kind: .text("test"))
-    ]
 }
 

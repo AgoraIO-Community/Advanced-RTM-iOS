@@ -22,8 +22,6 @@ extension MultiChatVC: UITableViewDataSource, UITableViewDelegate {
         membersTable.trailingAnchor.constraint(equalTo: membersView.trailingAnchor).isActive = true
         membersTable.bottomAnchor.constraint(equalTo: membersView.bottomAnchor, constant: -60).isActive = true
         membersTable.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.connectedUsers.append(self.localUser)
-        self.usersLookup[self.localUser.userDetails.senderId] = self.localUser
         membersTable.reloadData()
         self.membersTable = membersTable
         membersView.addSubview(self.raiseHandButton)
@@ -65,13 +63,6 @@ extension MultiChatVC: UITableViewDataSource, UITableViewDelegate {
         }
         return cell
     }
-    func statusUpdate(from sender: Sender, newStatus status: String) {
-        guard let userStatus = RTMUser.Status(rawValue: status) else {
-            print("could not set status to \(status)")
-            return
-        }
-        self.statusUpdate(from: sender, newStatus: userStatus)
-    }
     func statusUpdate(from sender: Sender, newStatus status: RTMUser.Status) {
         if let senderObj = self.usersLookup[sender.senderId] {
             if senderObj.status == status {
@@ -91,6 +82,8 @@ extension MultiChatVC: UITableViewDataSource, UITableViewDelegate {
             let newUser = RTMUser(userDetails: sender, handRaised: false, status: status)
             self.usersLookup[sender.senderId] = newUser
             self.connectedUsers.append(newUser)
+        } else {
+            return
         }
         self.membersTable?.reloadData()
     }
@@ -98,7 +91,7 @@ extension MultiChatVC: UITableViewDataSource, UITableViewDelegate {
         if let senderObj = self.usersLookup[sender.senderId] {
             senderObj.handRaised = flag
         } else {
-            let newUser = RTMUser(userDetails: sender, handRaised: flag, status: .present)
+            let newUser = RTMUser(userDetails: sender, handRaised: flag, status: .online)
             self.usersLookup[sender.senderId] = newUser
             self.connectedUsers.append(newUser)
         }

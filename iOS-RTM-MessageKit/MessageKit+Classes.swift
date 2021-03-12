@@ -1,11 +1,11 @@
 //
-//  MessageKitMessage.swift
+//  MessageKit+Classes.swift
 //  iOS-RTM-MessageKit
 //
 //  Created by Max Cobb on 02/03/2021.
 //
 
-import Foundation
+import UIKit
 import AgoraRtmKit
 import MessageKit
 
@@ -20,6 +20,19 @@ extension SenderType {
     }
 }
 
+internal struct ImageMediaItem: MediaItem {
+    var url: URL?
+    var image: UIImage?
+    var placeholderImage: UIImage
+    var size: CGSize
+
+    init(image: UIImage) {
+        self.image = image
+        self.size = image.size
+        self.placeholderImage = UIImage()
+    }
+}
+
 public struct MessageKitMessage: MessageType {
     public var sender: SenderType
 
@@ -29,7 +42,9 @@ public struct MessageKitMessage: MessageType {
 
     public var kind: MessageKind
 
-    static func getProperties(from text: String) -> (sender: Sender, sentData: Date, messageId: String)? {
+    static func getProperties(
+        from text: String
+    ) -> (sender: Sender, sentData: Date, messageId: String)? {
         let data = Data(text.utf8)
         do {
             guard let json = try JSONSerialization.jsonObject(
@@ -52,6 +67,38 @@ public struct MessageKitMessage: MessageType {
         }
         return nil
     }
+    public init?(basicMessage: AgoraRtmMessage) {
+        let data = Data(basicMessage.text.utf8)
+        do {
+            guard let json = try JSONSerialization.jsonObject(
+                    with: data, options: []) as? [String: Any],
+                  let sender = json["sender"] as? [String: String],
+                  let displayName = sender["display_name"],
+                  let senderId = sender["sender_id"],
+                  let messageId = json["message_id"] as? String,
+                  let type = json["type"] as? String,
+                  let timestamp = json["timestamp"] as? String,
+                  let body = json["body"] as? String,
+                  let sentDate = ISO8601DateFormatter().date(from: timestamp)
+            else {
+                return nil
+            }
+
+            var messageKind: MessageKind!
+            if type == "text" {
+                messageKind = .text(body)
+            } else {
+                return nil
+            }
+            self = MessageKitMessage(
+                sender: Sender(senderId: senderId, displayName: displayName),
+                messageId: messageId, sentDate: sentDate, kind: messageKind
+            )
+        } catch let error as NSError {
+            print("Failed to load: \(error.localizedDescription)")
+            return nil
+        }
+    }
 
     func generateMessageText() -> String {
         var rtmMessage: [String: Any] = [
@@ -66,9 +113,10 @@ public struct MessageKitMessage: MessageType {
         case .text(let str):
             rtmMessage["type"] = "text"
             rtmMessage["body"] = str
-//            return AgoraRtmMessage(text: str)
+        //            return AgoraRtmMessage(text: str)
         case .photo(_):
             rtmMessage["type"] = "photo"
+            rtmMessage["body"] = ""
         default:
             print("no conversion for type: \(kind)")
         }
@@ -88,38 +136,6 @@ public struct MessageKitMessage: MessageType {
     }
     public init?(image: AgoraRtmImageMessage) {
         return nil
-    }
-    public init?(basicMessage: AgoraRtmMessage) {
-        let data = Data(basicMessage.text.utf8)
-        do {
-            guard let json = try JSONSerialization.jsonObject(
-                    with: data, options: []) as? [String: Any],
-                  let sender = json["sender"] as? [String: String],
-                  let displayName = sender["display_name"],
-                  let senderId = sender["sender_id"],
-                  let messageId = json["message_id"] as? String,
-                  let type = json["type"] as? String,
-                  let timestamp = json["timestamp"] as? String,
-                  let body = json["body"] as? String,
-                  let sentDate = ISO8601DateFormatter().date(from: timestamp)
-            else {
-                return nil
-            }
-
-            var messageKind: MessageKind?
-            if type == "text" {
-                messageKind = .text(body)
-            } else {
-                return nil
-            }
-            self = MessageKitMessage(
-                sender: Sender(senderId: senderId, displayName: displayName),
-                messageId: messageId, sentDate: sentDate, kind: messageKind!
-            )
-        } catch let error as NSError {
-            print("Failed to load: \(error.localizedDescription)")
-            return nil
-        }
     }
 }
 

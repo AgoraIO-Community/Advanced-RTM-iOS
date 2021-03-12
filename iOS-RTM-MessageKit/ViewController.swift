@@ -73,8 +73,6 @@ class ViewController: UIViewController {
             return
         }
         self.navigationController?.pushViewController(MultiChatVC(username: username, channel: channelName), animated: true)
-//        self.pushViewController()
-//        self.present(MultiChatVC(username: username, channel: channelName), animated: true)
     }
 
 }

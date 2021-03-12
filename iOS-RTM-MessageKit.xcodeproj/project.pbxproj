@@ -22,7 +22,7 @@
 		F3A3A29525F90C4800209F2D /* DownloadCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A3A29425F90C4800209F2D /* DownloadCollectionCell.swift */; };
 		F3BECD2225F798470060A8F4 /* MultiChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BECD2125F798470060A8F4 /* MultiChatVC.swift */; };
 		F3BECD2725F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BECD2625F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift */; };
-		F3EB450A25EE80D400945D6A /* MessageKitMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB450925EE80D400945D6A /* MessageKitMessage.swift */; };
+		F3EB450A25EE80D400945D6A /* MessageKit+Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB450925EE80D400945D6A /* MessageKit+Classes.swift */; };
 		F3EB450D25EE8B6900945D6A /* RTMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB450C25EE8B6900945D6A /* RTMUser.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,7 @@
 		F3A3A29425F90C4800209F2D /* DownloadCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCollectionCell.swift; sourceTree = "<group>"; };
 		F3BECD2125F798470060A8F4 /* MultiChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiChatVC.swift; sourceTree = "<group>"; };
 		F3BECD2625F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiChatVC+Downloads.swift"; sourceTree = "<group>"; };
-		F3EB450925EE80D400945D6A /* MessageKitMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageKitMessage.swift; sourceTree = "<group>"; };
+		F3EB450925EE80D400945D6A /* MessageKit+Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessageKit+Classes.swift"; sourceTree = "<group>"; };
 		F3EB450C25EE8B6900945D6A /* RTMUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,13 +104,13 @@
 				F393B60F25E93717009996EB /* SceneDelegate.swift */,
 				F393B61125E93717009996EB /* ViewController.swift */,
 				F3BECD2125F798470060A8F4 /* MultiChatVC.swift */,
-				F3A3A29425F90C4800209F2D /* DownloadCollectionCell.swift */,
 				F380A29025EFC73F0057B4CA /* MultiChatVC+Messages.swift */,
+				F3EB450925EE80D400945D6A /* MessageKit+Classes.swift */,
 				F380A28D25EFC6FD0057B4CA /* MultiChatVC+Members.swift */,
 				F3BECD2625F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift */,
+				F3A3A29425F90C4800209F2D /* DownloadCollectionCell.swift */,
 				F380A29325EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift */,
 				F393B62625E93AF2009996EB /* RTMChatViewController.swift */,
-				F3EB450925EE80D400945D6A /* MessageKitMessage.swift */,
 				F3EB450C25EE8B6900945D6A /* RTMUser.swift */,
 				F393B61325E93717009996EB /* Main.storyboard */,
 				F393B61625E93719009996EB /* Assets.xcassets */,
@@ -223,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3BECD2725F7BA2F0060A8F4 /* MultiChatVC+Downloads.swift in Sources */,
-				F3EB450A25EE80D400945D6A /* MessageKitMessage.swift in Sources */,
+				F3EB450A25EE80D400945D6A /* MessageKit+Classes.swift in Sources */,
 				F393B62725E93AF2009996EB /* RTMChatViewController.swift in Sources */,
 				F393B61225E93717009996EB /* ViewController.swift in Sources */,
 				F3EB450D25EE8B6900945D6A /* RTMUser.swift in Sources */,

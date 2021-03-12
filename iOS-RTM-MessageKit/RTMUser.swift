@@ -15,9 +15,8 @@ class RTMUser {
     }
     
     enum Status: String {
-        case present
+        case online
         case offline
-        case admin
     }
     var userDetails: Sender
     var handRaised: Bool = false
