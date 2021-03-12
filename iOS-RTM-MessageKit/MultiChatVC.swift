@@ -32,6 +32,7 @@ class MultiChatVC: UIViewController {
     // MARK: Members
     var connectedUsers: [RTMUser] = []
     var offlineUsers: [RTMUser] = []
+    var usersLookup: [String: RTMUser] = [:]
     var membersTable: UITableView?
     lazy var raiseHandButton: UIButton = {
         let btn = UIButton(type: .custom)
