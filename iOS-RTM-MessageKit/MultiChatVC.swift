@@ -27,7 +27,11 @@ class MultiChatVC: UIViewController {
 
     // MARK: MessageKit
     var messageKitVC: RTMChatViewController!
-    lazy var messageList: [MessageType] = []
+    lazy var messageList: [MessageType] = [
+//        MessageKitMessage(sender: Sender(senderId: "1", displayName: "George Clooney"), messageId: "roger1", sentDate: .init(timeIntervalSince1970: 10), kind: .text("Hello!")),
+//        MessageKitMessage(sender: Sender(senderId: "2", displayName: "Denzel Washington"), messageId: "jake1", sentDate: .init(timeIntervalSince1970: 30), kind: .text("You again?")),
+//        MessageKitMessage(sender: Sender(senderId: "2", displayName: "Denzel Washington"), messageId: "jake2", sentDate: .init(timeIntervalSince1970: 30), kind: .text("What do you want?")),
+    ]
 
     // MARK: Members
     var connectedUsers: [RTMUser] = []

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		818B01AC9712369721CF58C8 /* Pods_iOS_RTM_MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C32C11F6087F89108A382BC /* Pods_iOS_RTM_MessageKit.framework */; };
+		F3157C2F25FFDBBB00CF030B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3157C2E25FFDBBB00CF030B /* Assets.xcassets */; };
 		F380A28E25EFC6FE0057B4CA /* MultiChatVC+Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380A28D25EFC6FD0057B4CA /* MultiChatVC+Members.swift */; };
 		F380A29125EFC73F0057B4CA /* MultiChatVC+Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380A29025EFC73F0057B4CA /* MultiChatVC+Messages.swift */; };
 		F380A29425EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F380A29325EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift */; };
@@ -15,7 +16,6 @@
 		F393B61025E93717009996EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393B60F25E93717009996EB /* SceneDelegate.swift */; };
 		F393B61225E93717009996EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393B61125E93717009996EB /* ViewController.swift */; };
 		F393B61525E93717009996EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F393B61325E93717009996EB /* Main.storyboard */; };
-		F393B61725E93719009996EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F393B61625E93719009996EB /* Assets.xcassets */; };
 		F393B61A25E93719009996EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F393B61825E93719009996EB /* LaunchScreen.storyboard */; };
 		F393B62425E937F0009996EB /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = F393B62325E937F0009996EB /* MessageKit */; };
 		F393B62725E93AF2009996EB /* RTMChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393B62625E93AF2009996EB /* RTMChatViewController.swift */; };
@@ -30,6 +30,7 @@
 		0C32C11F6087F89108A382BC /* Pods_iOS_RTM_MessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_RTM_MessageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD66638DF3EA3E3E488AF86 /* Pods-iOS-RTM-MessageKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-RTM-MessageKit.release.xcconfig"; path = "Target Support Files/Pods-iOS-RTM-MessageKit/Pods-iOS-RTM-MessageKit.release.xcconfig"; sourceTree = "<group>"; };
 		788BFDCD41D408EBCF0DA297 /* Pods-iOS-RTM-MessageKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-RTM-MessageKit.debug.xcconfig"; path = "Target Support Files/Pods-iOS-RTM-MessageKit/Pods-iOS-RTM-MessageKit.debug.xcconfig"; sourceTree = "<group>"; };
+		F3157C2E25FFDBBB00CF030B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F380A28D25EFC6FD0057B4CA /* MultiChatVC+Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiChatVC+Members.swift"; sourceTree = "<group>"; };
 		F380A29025EFC73F0057B4CA /* MultiChatVC+Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiChatVC+Messages.swift"; sourceTree = "<group>"; };
 		F380A29325EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiChatVC+AgoraRtmDelegate.swift"; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		F393B60F25E93717009996EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F393B61125E93717009996EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F393B61425E93717009996EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F393B61625E93719009996EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F393B61925E93719009996EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F393B61B25E93719009996EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F393B62625E93AF2009996EB /* RTMChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMChatViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 				F380A29325EFC7A90057B4CA /* MultiChatVC+AgoraRtmDelegate.swift */,
 				F393B62625E93AF2009996EB /* RTMChatViewController.swift */,
 				F3EB450C25EE8B6900945D6A /* RTMUser.swift */,
+				F3157C2E25FFDBBB00CF030B /* Assets.xcassets */,
 				F393B61325E93717009996EB /* Main.storyboard */,
-				F393B61625E93719009996EB /* Assets.xcassets */,
 				F393B61825E93719009996EB /* LaunchScreen.storyboard */,
 				F393B61B25E93719009996EB /* Info.plist */,
 			);
@@ -185,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F393B61A25E93719009996EB /* LaunchScreen.storyboard in Resources */,
-				F393B61725E93719009996EB /* Assets.xcassets in Resources */,
+				F3157C2F25FFDBBB00CF030B /* Assets.xcassets in Resources */,
 				F393B61525E93717009996EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -100,9 +100,8 @@ extension MultiChatVC: UITableViewDataSource, UITableViewDelegate {
 
     @objc func raiseHandPressed(sender: UIButton) {
         self.localUser.handRaised.toggle()
+        self.rtmChannel?.send(self.localUser.raiseHandRTMMessage)
         sender.setTitle((self.localUser.handRaised ? "Lower" : "Raise") + " Hand" , for: .normal)
-        let handRaisedMsg = self.localUser.raiseHandRTMMessage
-        self.rtmChannel?.send(handRaisedMsg)
         self.membersTable?.reloadData()
     }
 }

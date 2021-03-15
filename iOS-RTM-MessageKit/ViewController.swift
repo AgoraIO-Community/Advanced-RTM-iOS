@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         let tf = UITextField()
         tf.placeholder = "channel-name"
         tf.borderStyle = .roundedRect
-        tf.text = "test"
         return tf
     }()
     /// UITextField where the user will enter the channel to join
@@ -29,7 +28,6 @@ class ViewController: UIViewController {
         let tf = UITextField()
         tf.placeholder = "username"
         tf.borderStyle = .roundedRect
-        tf.text = "ipad"
         return tf
     }()
 
