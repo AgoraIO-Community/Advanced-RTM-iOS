@@ -54,25 +54,7 @@ extension MultiChatVC: UIDocumentPickerDelegate, UICollectionViewDelegate {
         guard let url = urls.first,
               url.startAccessingSecurityScopedResource()
         else { return }
-        var requestID: Int64 = Int64.random(in: Int64.min...Int64.max)
-        self.rtmKit?.createFileMessage(byUploading: url.path, withRequest: &requestID, completion: { (requestId, fileMsg, errorCode) in
-            if errorCode == .ok, let fileMsg = fileMsg {
-                fileMsg.fileName = url.lastPathComponent
-                self.rtmChannel?.send(fileMsg, completion: { sentStatus in
-                    if sentStatus == .errorOk {
-                        print("File message sent")
-                    }
-                })
-                self.downloadFiles.append(DownloadableFileData(filename: url.lastPathComponent, downloadID: fileMsg.mediaId))
-                self.downloadsTable?.reloadData()
-            } else {
-                print(errorCode)
-            }
-            DispatchQueue.main.async {
-                url.stopAccessingSecurityScopedResource()
-            }
-
-        })
+        <#Create file message, then send to the channel#>
     }
 
     func channel(
@@ -80,28 +62,12 @@ extension MultiChatVC: UIDocumentPickerDelegate, UICollectionViewDelegate {
         fileMessageReceived message: AgoraRtmFileMessage,
         from member: AgoraRtmMember
     ) {
-        self.downloadFiles.append(
-            DownloadableFileData(filename: message.fileName, downloadID: message.mediaId)
-        )
-        self.downloadsTable?.reloadData()
+        <#Display file message in downloadsTable#>
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let docsData = self.downloadFiles[indexPath.row]
-        let downloadFileURL = FileManager.default.temporaryDirectory
-            .appendingPathComponent(docsData.filename)
-        if FileManager.default.fileExists(atPath: downloadFileURL.path) {
-            self.showFile(at: downloadFileURL)
-            return
-        }
-        var requestId = Int64.random(in: Int64.min...Int64.max)
-        self.rtmKit?.downloadMedia(docsData.downloadID, toFile: downloadFileURL.path, withRequest: &requestId, completion: { _, errcode in
-            if errcode == .ok {
-                self.showFile(at: downloadFileURL)
-            } else {
-                print(errcode)
-            }
-        })
+        <#Download the file, then display it using showFile#>
     }
     func showFile(at url: URL) {
         self.previewItem = url

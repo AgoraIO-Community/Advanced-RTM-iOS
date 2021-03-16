@@ -79,34 +79,12 @@ extension MultiChatVC: InputBarAccessoryViewDelegate {
                     messageId: UUID().uuidString, sentDate: .init(), kind: .text(str)
                 )
                 self.addNewMessage(message: message)
-                let msgText = message.generateMessageText()
-                self.rtmChannel?.send(AgoraRtmMessage(text: msgText), completion: { sentCode in
-                    if sentCode != .errorOk {
-                        print("could not send message")
-                    }
-                })
+                <#Send text based message over RTM#>
             } else if let img = component as? UIImage {
                 let mediaItem = ImageMediaItem(image: img)
                 let message = MessageKitMessage(sender: self.currentSender(), messageId: UUID().uuidString, sentDate: .init(), kind: .photo(mediaItem))
                 self.addNewMessage(message: message)
-                let fileURL = FileManager.default.temporaryDirectory
-                    .appendingPathComponent(UUID().uuidString)
-                if let _ = try? img.pngData()?.write(to: fileURL) {
-                    var requestID = Int64.random(in: Int64.min...Int64.max)
-                    self.rtmKit?.createImageMessage(
-                        byUploading: fileURL.path, withRequest: &requestID,
-                        completion: { (requestId, imageMsg, errorCode) in
-                            if errorCode == .ok, let imageMsg = imageMsg {
-                                imageMsg.text = message.generateMessageText()
-                                self.rtmChannel?.send(imageMsg, completion: { (messageSent) in
-                                    if messageSent != .errorOk {
-                                        print(messageSent)
-                                    }
-                                })
-                            }
-                        }
-                    )
-                }
+                <#Write image to file, then send over RTM#>
             }
         }
     }

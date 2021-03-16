@@ -70,27 +70,12 @@ class MultiChatVC: UIViewController {
     var downloadFiles: [DownloadableFileData] = []
     var previewItem: URL?
     func rtmLogin() {
-        self.rtmKit = AgoraRtmKit(appId: <#Agora App ID#>, delegate: self)
-        self.rtmKit?.login(byToken: nil, user: self.localUser.userDetails.senderId, completion: { loginCode in
-            if loginCode == .ok {
-                self.rtmChannel = self.rtmKit?.createChannel(withId: self.channel, delegate: self)
-                self.rtmChannel?.join(completion: self.channelJoined(joinCode:))
-            }
-        })
+        <#Create AgoraRtmKit, login, and connect to the channel#>
     }
 
     func channelJoined(joinCode: AgoraRtmJoinChannelErrorCode) {
         if joinCode == .channelErrorOk {
-            print("connected to channel")
-            self.localUser.status = .online
-            self.connectedUsers.insert(self.localUser, at: 0)
-            self.usersLookup[self.localUser.userDetails.senderId] = self.localUser
-            self.rtmChannel?.send(self.localUser.statusRTMMessage) { sentErr in
-                if sentErr != .errorOk {
-                    print("status to channel send failed \(sentErr.rawValue)")
-                }
-            }
-            self.membersTable?.reloadData()
+            <#Set localUser status, add to connectedUsers, send status to channel.#>
         }
     }
 
