@@ -1,5 +1,7 @@
 # Advanced Real-time Messaging with Agora RTM
 
+> You are on the guided branch, the repo here is incomplete. If you want the full working code, switch to branch `main`.
+
 With this example project, create an RTM system where people can join channels to send text or images to eachother, see who else is online, and even share pdfs or USDZ files to each-other!
 
 Checkout branch `guide_start` to follow along with the guide and see how to get this app connected to Agora's Real-time messaging backend.
