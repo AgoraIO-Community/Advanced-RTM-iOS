@@ -18,6 +18,6 @@ Checkout branch `guide_start` to follow along with the guide and see how to get 
 
 ## Other Resources
 
-For more information about building applications using Agora.io SDKs, take a look at the [Agora Video Call Quickstart Guide](https://docs.agora.io/en/Video/start_call_ios?platform=iOS&utm_source=medium&utm_medium=blog&utm_campaign=real-time-messaging-video-dynamic-channels) and [Agora API Reference](https://docs.agora.io/en/Video/API Reference/oc/docs/headers/Agora-Objective-C-API-Overview.html?utm_source=medium&utm_medium=blog&utm_campaign=real-time-messaging-video-dynamic-channels).
+For more information about building applications using Agora.io SDKs, take a look at the [Agora Video Call Quickstart Guide](https://docs.agora.io/en/Video/start_call_ios?platform=iOS&utm_source=medium&utm_medium=blog&utm_campaign=real-time-messaging-video-dynamic-channels) and [Agora API Reference](https://docs.agora.io/en/Video/API%20Reference/oc/docs/headers/Agora-Objective-C-API-Overview.html?utm_source=medium&utm_medium=blog&utm_campaign=real-time-messaging-video-dynamic-channels).
 
 I also invite you to [join the Agoira.io Developer Slack community](http://bit.ly/2IWexJQ).
