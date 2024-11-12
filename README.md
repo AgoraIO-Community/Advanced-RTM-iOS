@@ -1,4 +1,13 @@
-# Advanced Real-time Messaging with Agora RTM
+# [ARCHIVED] Advanced Real-time Messaging with Agora RTM
+
+**⚠️ This project is no longer maintained and has been archived.**  
+Please note that this repository is now in a read-only state and will not receive any further updates or support.
+
+To build full-feature chat applications, we recommend using the latest version of the **Agora Chat SDK**: [Learn more](https://www.agora.io/en/products/chat/)
+
+For documentation and support, please visit the [Agora Documentation](https://docs.agora.io/en/).
+
+---
 
 With this example project, create an RTM system where people can join channels to send text or images to eachother, see who else is online, and even share pdfs or USDZ files to each-other!
 
